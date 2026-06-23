@@ -1,21 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Events</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1b1464b0;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #1B1464;
+            color: white;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        input {
+            padding: 10px 20px;
+            border: 1px solid black;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    </style>
 </head>
+
 <body>
-    
+
     <h1>DOM Events</h1>
+    <!-- Option 01 for event handler -->
     <button onclick="console.log(7)">Click me</button>
     <button onclick="console.log(69)">Another button</button>
 
     <!-- Single quote -->
-    <button onclick="console.log('Hello brother!')">Third button</button> 
-    <input type="text">
+    <button onclick="console.log('Hello brother!')">Third button</button>
+    <input placeholder="Your name..." type="text">
 
-    
+    <br><br>
+    <hr>
+
+    <!-- Option 02 for event handler (function)-->
+    <h2>Option 02 :</h2>
+    <button onclick="makeYellow()">Make Yellow</button>
+    <button onclick="makeRed()">Make Red</button>
+    <button onclick="makeBisque()">Make Bisque</button>
+    <button onclick="makeBlueMartina()">Blue Martina</button>
+    <button onclick="makeEnergos()">Make Energos</button>
+
+    <!-- Another ways --> <br><br>
+    <hr>
+    <h2>Another Ways :</h2>
+    <button id="btn-make-old-gera">Make Old Gera</button>
+
+    <!-- Not used way -->
+    <button id="btn-make-purple">Make Purple</button>
+
+
+
+
+    <!--🟢 internal javascript -->
+    <script>
+
+        // Way - 01
+        // <button onclick="console.log(7)">Click me</button>
+
+        // Way - 03
+        function makeYellow() {
+            document.body.style.backgroundColor = "yellow";
+        }
+
+        // way - 03
+        const makeOldGera = document.getElementById("btn-make-old-gera");
+        makeOldGera.onclick = function makeOldGera() {
+            document.body.style.backgroundColor = "#cf6a87";
+        }
+
+        // way- 04 (Not used)
+        const btnMakePurple = document.getElementById("btn-make-purple");
+        btnMakePurple.onclick = makePurple;  // Not Call
+
+
+        function makePurple() {
+            document.body.style.backgroundColor = "purple";
+        }
+
+
+
+    </script>
+
+
+
+    <!--🟢 external javascript -->
     <script src="./script/01_events.js"></script>
+
 </body>
+
 </html>
