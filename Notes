@@ -1,0 +1,14 @@
+✔️ DOM Event Handlers:
+
+- onclick       - click করলে
+- oninput       - input value type করলে সাথে সাথে
+- onkeydown     - key press শুরু হলে
+- onkeyup       - key ছেড়ে দিলে
+- onchange      - value change করে focus ছাড়লে
+
+- onsubmit      - form submit করলে
+- onmouseenter  - mouse element এর ভিতরে ঢুকলে
+- onmouseleave  - mouse element থেকে বের হলে
+- onfocus       - input element focus হলে
+- onblur        - focus হারালে
+- onload        - page/resource load হলে
