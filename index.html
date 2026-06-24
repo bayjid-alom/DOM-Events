@@ -44,7 +44,8 @@
 
     <section>
         <h2>Another Pages :</h2>
-        <a href="Exercise/practice-dom.html">DOM Exercise - 1</a>
+        <a href="Exercise/practice-dom.html">DOM Exercise</a> <br>
+        <a href="Exercise/hover.html">Mouse Events</a>
     </section>
 
     <br><br>
@@ -79,10 +80,62 @@
     <button id="btn-make-purple">Make Purple</button>
 
 
+    <!-- Option - 04 -->
+
+    <button id="make-green-btn">Make Green</button>
+    <button id="make-gold-btn">Make Gold</button>
+
+    <button id="box">Hover me</button>
+
+
 
 
     <!--🟢 internal javascript -->
     <script>
+
+        const hoverBtn = document.getElementById("box");
+
+        hoverBtn.style.padding = "12px 25px";
+        hoverBtn.style.border = "1px solid gray";
+        hoverBtn.style.backgroundColor = "#f8fafc";
+        hoverBtn.style.color = "#0f172a";
+        hoverBtn.style.borderRadius = "10px";
+        hoverBtn.style.transition = "0.3s ease";
+
+        hoverBtn.addEventListener('mouseenter', function () {
+            hoverBtn.style.backgroundColor = "#3b82f6";
+            hoverBtn.style.color = "white";
+            hoverBtn.style.border = "1px solid #2563eb";
+            hoverBtn.style.transform = "scale(0.98)";
+        });
+
+        hoverBtn.addEventListener("mouseout", function () {
+            hoverBtn.style.backgroundColor = "#f8fafc";
+            hoverBtn.style.color = "#0f172a";
+            hoverBtn.style.border = "1px solid #e5e7eb";
+            hoverBtn.style.transform = "scale(1)";
+        });
+
+
+
+
+
+
+
+
+        // addEventListener('event type', handler) 🔥
+        const btnGreen = document.getElementById("make-green-btn");
+        btnGreen.addEventListener('click', function makeGreen() {
+            document.body.style.backgroundColor = "green";
+        })
+
+        document.getElementById("make-gold-btn")
+            .addEventListener('click', function makeGold() {
+                document.body.style.backgroundColor = 'gold';
+            })
+
+
+
 
         // Way - 01
         // <button onclick="console.log(7)">Click me</button>
@@ -106,8 +159,6 @@
         function makePurple() {
             document.body.style.backgroundColor = "purple";
         }
-
-
 
     </script>
 

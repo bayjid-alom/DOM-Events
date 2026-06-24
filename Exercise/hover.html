@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+</head>
+
+<body>
+
+    <div>
+        <button id="hover-btn">Hover me</button>
+    </div>
+
+
+    <script>
+        const hoverBtn = document.getElementById("hover-btn");
+
+        hoverBtn.style.padding = "12px 25px";
+        hoverBtn.style.color = "white";
+        hoverBtn.style.border = "1px solid #1f2937";
+        hoverBtn.style.borderRadius = "8px";
+        hoverBtn.style.backgroundColor = "#1f2937";
+        hoverBtn.style.transition = "0.3s ease";
+        hoverBtn.style.cursor = "pointer";
+
+        hoverBtn.addEventListener("mouseenter", function () {
+            hoverBtn.style.backgroundColor = "#6366f1";
+            hoverBtn.style.color = "white";
+            hoverBtn.style.border = "1px solid #4f46e5";
+            hoverBtn.style.transform = "scale(1.03)";
+        });
+
+        hoverBtn.addEventListener("mouseout", function () {
+            hoverBtn.style.backgroundColor = "#1f2937";
+            hoverBtn.style.color = "white";
+            hoverBtn.style.border = "1px solid #1f2937";
+            hoverBtn.style.transform = "scale(1)";
+        });
+    </script>
+
+</body>
+
+</html>

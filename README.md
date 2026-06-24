@@ -9,6 +9,8 @@
 </div>
 <br>
 
+[Visit : DOM Events 🔥](https://bayjid-alom.github.io/DOM-Events/)
+
 
 - Exploring DOM Events through Event Listeners, User Interactions, Event Bubbling, Delegation, and Dynamic Web Page Behavior. 
 
@@ -67,8 +69,35 @@ function makePurple() {
             document.body.style.backgroundColor = "purple";
 }
 ```
+```
+🟢 Way - 05 addEventListener('event type', handler) 🔥
 
+<button id="make-green-btn">Make Green</button>
 
+const btnGreen = document.getElementById("make-green-btn");
+btnGreen.addEventListener('click', function makeGreen(){
+    document.body.style.backgroundColor = "green";
+})
+```
+
+```
+document.getElementById("make-gold-btn")
+     .addEventListener('click', function makeGold() {
+            document.body.style.backgroundColor = 'gold';
+ })
+ ```
+
+### What are different ways to add event to html element and which one is the best. explain why?
+- Check : Notes
+
+## DOM Events - Short Note
+
+| Category         | Examples                               |
+|------------------|----------------------------------------|
+| Mouse Events     | click, dblclick, mouseenter, mouseleave |
+| Keyboard Events  | keydown, keyup, keypress              |
+| Form Events      | submit, input, change, focus, blur    |
+| Window Events    | load, resize, scroll, unload          |
 
 
 

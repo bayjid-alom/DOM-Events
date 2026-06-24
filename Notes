@@ -12,3 +12,109 @@
 - onfocus       - input element focus হলে
 - onblur        - focus হারালে
 - onload        - page/resource load হলে
+
+
+
+
+## What are different ways to add event to html element and which one is the best. explain why?
+JavaScript দিয়ে HTML Element-এ Event যোগ করার ৩টি প্রধান উপায় আছে।
+
+1. Inline Event Handler (HTML-এর ভিতরে)
+<button onclick="showMessage()">
+    Click Me
+</button>
+
+<script>
+function showMessage() {
+    console.log("Hello");
+}
+</script>
+
+❌ HTML এবং JavaScript mix হয়ে যায়
+❌ Maintain করা কঠিন
+❌ Professional project-এ কম ব্যবহার করা হয়
+
+
+
+2. DOM Property Event Handler
+<button id="btn">Click Me</button>
+
+<script>
+const btn = document.getElementById("btn");
+
+btn.onclick = function () {
+    console.log("Hello");
+};
+</script>
+
+সুবিধা: ✅ HTML clean থাকে
+
+❌ একই event-এর জন্য একাধিক function যোগ করা যায় না
+
+btn.onclick = function () {
+    console.log("First");
+};
+
+btn.onclick = function () {
+    console.log("Second");
+};
+
+Output:
+Second
+
+কারণ দ্বিতীয়টি প্রথমটিকে replace করে দেয়।
+
+
+
+
+
+3. addEventListener() ⭐ (Best)
+<button id="btn">Click Me</button>
+
+<script>
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function () {
+    console.log("Hello");
+});
+</script>
+
+সুবিধা:
+✅ Multiple event handlers যোগ করা যায়
+
+btn.addEventListener("click", () => {
+    console.log("First");
+});
+
+btn.addEventListener("click", () => {
+    console.log("Second");
+});
+
+Output:
+First
+Second
+
+✅ HTML ও JS আলাদা থাকে
+✅ Event object পাওয়া যায়
+
+btn.addEventListener("click", (event) => {
+    console.log(event);
+});
+
+✅ Modern এবং professional standard
+
+
+
+কোনটা Best?
+⭐ addEventListener()
+
+কারণ:
+
+Multiple handlers support করে
+Code maintain করা সহজ
+HTML clean থাকে
+Event object access করা যায়
+Real-world এবং professional project-এ সবচেয়ে বেশি ব্যবহৃত হয়
+Interview Answer
+
+There are three ways to add events to an HTML element: Inline Event Handler, DOM Property (onclick), and addEventListener(). Among them, addEventListener() is the best because it allows multiple event handlers, keeps HTML and JavaScript separate, and provides better flexibility and maintainability.
