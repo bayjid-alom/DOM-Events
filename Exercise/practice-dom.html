@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        body {
+            margin: 22px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1b1464b0;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #1B1464;
+            color: white;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+
+        .section-design {
+            border: 2px solid #1B1464;
+            padding: 20px;
+            background-color: lightblue;
+            margin-bottom: 20px;
+            border-radius: 13px;
+        }
+
+        a{
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body id="body">
+
+    <button onclick="makeBisque()">Make Bisque</button>
+    <button id="make-blue">Make Blue</button>
+    <button id="lightgreen-btn">Make lightgreen</button>
+    
+    <button id="make-li-blue">Li blue</button>
+    
+    <button id="count"> 0</button>
+    <button><a href="../index.html">Back ↩️</a></button>
+
+
+    <section id="players-section">
+        <h1 class="players-headiing" id="heading"> Players Name :</h1>
+
+    </section>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+
+        const makeLiBlue = document.getElementById("make-li-blue");
+        makeLiBlue.onclick = function () {
+
+            const allLi = document.getElementsByTagName("li");
+            for (const li of allLi) {
+                li.style.color = "blue"
+            }
+        }
+
+
+        const countBtn = document.getElementById("count");
+        let count = 0;
+        countBtn.onclick = function () {
+            count++;
+            countBtn.innerText = count;
+        }
+
+
+        const playersSection = document.getElementById("players-section");
+        const ul = document.createElement("ul");
+        playersSection.appendChild(ul)
+
+        ul.innerHTML = `
+        <li>List item - 1</li>
+    <li>List item - 2</li>
+    <li>List item - 3</li>
+    <li>List item - 4</li>
+    <li>List item - 5</li>`
+
+
+
+        const mainContainer = document.getElementById("body");
+        const newSection = document.createElement("section")
+
+        newSection.innerHTML = ` <h1>Book Lists</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque harum neque sit nemo quam nam recusandae eos nostrum fugit accusantium?</p>
+
+    <ul>
+        <li>Book - 1</li>
+        <li>Book - 2</li>
+        <li>Book - 3</li>
+        <li>Book - 4</li>
+        <li>Book - 5</li>
+    </ul>`
+
+        mainContainer.appendChild(newSection)
+
+        const allLi = document.getElementsByTagName("li");
+        for (const li of allLi) {
+            console.log(li)
+            li.style.fontSize = "1.15em";
+            li.style.color = "red"
+
+        }
+
+        const allSections = document.getElementsByTagName("section");
+        for (const section of allSections) {
+            section.classList.add("section-design");
+        }
+
+
+        const heading = document.getElementById("heading");
+        console.log(heading.innerText)
+        console.log(heading.classList)
+        heading.innerText = "Cricketers Name :"
+
+
+
+
+        function makeBisque() {
+            document.body.style.backgroundColor = "bisque"
+        }
+
+        const btnMakeBlue = document.getElementById("make-blue");
+        btnMakeBlue.onclick = function () {
+            document.body.style.backgroundColor = "blue"
+        }
+
+
+        const btnLightGreen = document.getElementById("lightgreen-btn");
+        btnLightGreen.onclick = function () {
+            document.body.style.backgroundColor = "lightgreen"
+        }
+
+    </script>
+
+</body>
+
+</html>
