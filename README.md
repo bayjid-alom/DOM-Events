@@ -118,6 +118,36 @@ document.getElementById("update-btn")
     })
 ```
 
+<br>
+
+
+```
+✔️ Post your comment :
+
+  <script>
+
+        document.getElementById('post-btn').addEventListener("click", function () {
+            console.log("Post button clicked")
+
+            const commentBox = document.getElementById("textarea");
+            const comment = commentBox.value;
+
+            const commentContainer = document.getElementById("comment-container")
+
+            const commentElement = document.createElement("p");
+            commentElement.classList.add("comment")
+
+            commentElement.innerText = comment;
+
+            commentContainer.appendChild(commentElement);
+
+            commentBox.value = "";
+        });
+
+    </script>
+
+```
+
 
 
 ### ✔️ DOM Event Handlers:
