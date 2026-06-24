@@ -101,6 +101,25 @@ document.getElementById("make-gold-btn")
 
 
 
+```
+ <div class="box">
+        <h3 id="name-change">There is no name..!</h3>
+        <input type="text" name="" id="input" placeholder="Your name">
+        <button id="update-btn">Update</button>
+ </div>
+
+document.getElementById("update-btn")
+    .addEventListener("click", function () {
+        const inputElement = document.getElementById("input");
+        const valueOfInput = inputElement.value
+        const name = document.getElementById("name-change");
+        name.style.fontSize = "20px"
+        name.innerText = valueOfInput;
+    })
+```
+
+
+
 ### ✔️ DOM Event Handlers:
 
 - onclick       → click করলে  (Most used)

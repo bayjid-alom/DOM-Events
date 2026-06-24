@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Change</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        .box {
+            max-width: 50%;
+            margin: 0 auto;
+            border: none;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1b1464b0;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #1B1464;
+            color: white;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        input {
+            padding: 10px 20px;
+            border: 1px solid black;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        @media screen and (max-width:576px) {
+            .box {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h3 id="name-change">There is no name..!</h3>
+        <input type="text" name="" id="input" placeholder="Your name">
+        <button id="update-btn">Update</button>
+
+
+        <br>
+        <h3>Counter :</h3>
+        <button id="count-btn">0</button>
+
+    </div>
+
+
+
+
+    <script>
+
+        // Counter
+        let count = 0;
+        const countBtn = document.getElementById("count-btn")
+        countBtn.addEventListener("click", function () {
+            count++;
+            countBtn.innerText = count;
+        })
+
+
+
+        // Text-Change
+        document.getElementById("update-btn")
+            .addEventListener("click", function () {
+                const inputElement = document.getElementById("input");
+                const valueOfInput = inputElement.value;
+
+                const name = document.getElementById("name-change");
+                name.style.fontSize = "20px"
+                name.innerText = valueOfInput;
+            })
+
+    </script>
+
+</body>
+
+</html>

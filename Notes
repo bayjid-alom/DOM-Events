@@ -15,6 +15,99 @@
 
 
 
+🧠 DOM Full Topic List
+
+1. DOM Introduction
+What is DOM?
+How browser creates DOM from HTML
+DOM Tree structure
+Nodes vs Elements
+
+2. DOM Selectors (Finding Elements)
+getElementById()
+getElementsByClassName()
+getElementsByTagName()
+querySelector()
+querySelectorAll()
+
+3. DOM Traversing (Navigating)
+parentNode / parentElement
+childNodes / children
+firstChild / firstElementChild
+lastChild / lastElementChild
+nextSibling / nextElementSibling
+previousSibling / previousElementSibling
+
+4. DOM Manipulation (Changing Content)
+innerText
+innerHTML
+textContent
+createElement()
+appendChild()
+removeChild()
+replaceChild()
+
+5. DOM Attributes & Properties
+getAttribute()
+setAttribute()
+removeAttribute()
+hasAttribute()
+dataset (data-* attributes)
+
+6. DOM Styling (CSS with JS)
+element.style.property
+classList.add()
+classList.remove()
+classList.toggle()
+classList.contains()
+
+7. DOM Events
+click
+dblclick
+mouse events (mouseenter, mouseleave, mousemove)
+keyboard events (keydown, keyup)
+form events (submit, input, change)
+window events (load, resize, scroll)
+
+8. Event Handling
+inline event (onclick="")
+DOM property (element.onclick)
+addEventListener() ⭐ (BEST METHOD)
+removeEventListener()
+
+9. Event Object
+event.target
+event.type
+event.preventDefault()
+event.stopPropagation()
+
+10. DOM Forms Handling
+input value access
+form validation
+submit handling
+real-time input tracking
+
+11. DOM Creation Projects (Dynamic UI)
+Create cards dynamically
+Todo list app
+Delete / add items
+Like / dislike buttons
+Filtering UI
+
+12. Advanced DOM Concepts
+Event bubbling
+Event capturing
+Delegation ⭐
+Live vs Static collections
+Performance tips
+🚀 Bonus (Important in real projects)
+localStorage with DOM
+sessionStorage
+JSON + DOM rendering
+API data rendering in DOM
+
+
+
 
 ## What are different ways to add event to html element and which one is the best. explain why?
 JavaScript দিয়ে HTML Element-এ Event যোগ করার ৩টি প্রধান উপায় আছে।

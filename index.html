@@ -37,15 +37,47 @@
             cursor: pointer;
             transition: 0.3s;
         }
+
+        .pages a {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .pages {
+            padding: 20px;
+        }
+
+        .pages h2 {
+            margin: 15px 0 10px;
+        }
+
+        .pages a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .pages a:hover {
+            background: #f3f3f3;
+        }
     </style>
 </head>
 
 <body>
 
-    <section>
-        <h2>Another Pages :</h2>
+    <section class="pages">
+        <h2>Exercise Pages :</h2>
         <a href="Exercise/practice-dom.html">DOM Exercise</a> <br>
-        <a href="Exercise/hover.html">Mouse Events</a>
+        <a href="Exercise/hover.html">Mouse Events</a> <br>
+        <a href="Exercise/text-change.html">Text Change (3 Elemnets)</a>
+
+        <h2>Same Path Pages :</h2>
+        <a href="events.html">Events.html</a>
     </section>
 
     <br><br>
