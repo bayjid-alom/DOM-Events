@@ -216,11 +216,29 @@ button.addEventListener("click", function (e) {
 
 <br>
 
-## ✅ 
+## ✅ Event Delegation কী?
+
 ```
+Event Delegation হলো parent element-এর মধ্যে event listener বসিয়ে তার child elements-এর event handle করার technique।
+
+কারণ event bubble করে parent পর্যন্ত আসে, তাই parent-এর listener দিয়েই child-এর event ধরা যায়।
+
+<ul id="list">
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+const list = document.getElementById("list");
+
+list.addEventListener("click", function (event) {
+    console.log(event.target.innerText);
+});
 ```
 
 
+
+## ✔️ To clear input field after click Post button
+- nameInput.value = "";     ❗(Input tag will be Empty)
 
 
 

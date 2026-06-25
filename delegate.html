@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+    <style>
+        html {
+            margin: 20px;
+        }
+
+        body {
+            padding: 20px;
+            margin: 0 auto;
+            box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.3);
+            border-radius: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <h1>Explore the concept of Event Delegate</h1>
+    <!-- ol#item-list>li.item*6{My awesome item -$} -->
+    <button id="btn-add-item">Add new item</button>
+    <ol id="item-list">
+        <li class="item">My awesome item -1</li>
+        <li class="item">My awesome item -2</li>
+        <li class="item">My awesome item -3</li>
+        <li class="item">My awesome item -4</li>
+        <li class="item">My awesome item -5</li>
+        <li class="item">My awesome item -6</li>
+    </ol>
+
+
+    <script>
+
+        // লুপ না করে ......
+        // const items = document.getElementsByClassName("item");
+        // for (const item of items) {
+        //     item.addEventListener('click', function (event) {
+        //         // console.log(event.target.parentNode.parentNode)
+        //         event.target.parentNode.removeChild(event.target)
+        //     })
+        // }
+
+
+        // পেরেন্টে এড করবো delegate
+        document.getElementById("item-list").addEventListener("click", function (event) {
+            // console.log(event.target)
+            event.target.parentNode.removeChild(event.target)
+        })
+
+        // add a new item;
+        document.getElementById("btn-add-item").addEventListener("click", function () {
+            const ol = document.getElementById("item-list");
+            const li = document.createElement("li");
+            li.innerText = "New item";
+
+            li.classList.add("item")
+            ol.appendChild(li)
+        })
+    </script>
+
+
+
+    <section>
+        <button id="add-btn">আইটেম যোগ করুন</button>
+        <ul id="list">
+            <li>unordered item -1</li>
+            <li>unordered item -2</li>
+            <li>unordered item -3</li>
+            <li>unordered item -4</li>
+            <li>unordered item -5</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById("list").addEventListener("click", function (event) {
+            event.target.parentNode.removeChild(event.target)
+        })
+
+        document.getElementById("add-btn").addEventListener("click", function (event) {
+            const listCon = document.getElementById('list');
+            const itemElement = document.createElement("li");
+            itemElement.innerText = "নতুন আইটেম"
+            listCon.appendChild(itemElement)
+        })
+
+    </script>
+</body>
+
+</html>

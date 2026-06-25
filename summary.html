@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events summary</title>
+
+    <style>
+        p {
+            padding: 20px;
+            border-radius: 9px;
+            border: none;
+            margin: 20px;
+            box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <h1>DOM Events Summary</h1>
+        <input id="name-input" type="text" placeholder="Your name...">
+        <button onclick="addName()">Add Name</button>
+        <button id="btn-add-name">নাম যোগ করুন </button>
+
+        <div id="name-container">
+            <!-- Users will be added -->
+        </div>
+    </section>
+
+
+    <script>
+        // function callback (Sometimes used)
+        function addName() {
+            const nameInput = document.getElementById("name-input");
+            const name = nameInput.value;
+
+            const nameContainer = document.getElementById("name-container");
+            const p = document.createElement("p");
+            p.innerText = name;
+
+            nameContainer.appendChild(p)
+            nameInput.value = "";
+        }
+
+
+        // addEventListener (best practice)
+        document.getElementById("btn-add-name").addEventListener("click", function () {
+            const nameInput = document.getElementById("name-input");
+            const name = nameInput.value;
+
+            const nameContainer = document.getElementById("name-container");
+            const nameElement = document.createElement("p");
+            nameElement.innerText = name;
+
+            nameContainer.appendChild(nameElement)
+            nameInput.value = ""
+        })
+
+    </script>
+</body>
+
+</html>
