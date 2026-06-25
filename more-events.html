@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+
+<body>
+
+    <button id="btn-mouse">Micky Mouse Minnie</button>
+    <input type="text" id="user-name" placeholder="Your name">
+    <input type="text" id="user-email" placeholder="Your email">
+
+
+    <script>
+        // document.getElementById("btn-mouse").addEventListener("mouseenter", function () {
+        //     console.log("event trigger")
+        // })
+
+        // document.getElementById("btn-mouse").addEventListener("mousemove", function () {
+        //     console.log("event trigger")
+        // })
+
+        // document.getElementById("btn-mouse").addEventListener("mouseout", function () {
+        //     console.log("event trigger")
+        // })
+
+        // document.getElementById("user-name").addEventListener("focus", function () {
+        //     console.log("user about to write")
+        // })
+
+        // document.getElementById("user-email").addEventListener("focus", function () {
+        //     console.log("user about to email")
+        // })
+
+        // document.getElementById("user-email").addEventListener("blur", function () {
+        //     console.log("user done with email")
+        // })
+
+        // document.getElementById("user-name").addEventListener("keydown", function (event) {
+        //     console.log('typing', event.target.value) // Event কোথায় হচ্ছে?
+        // })
+
+        document.getElementById("user-name").addEventListener("keyup", function (event) {
+            console.log('typing', event.target.value) // Event কোথায় হচ্ছে?
+        })
+
+
+    </script>
+</body>
+
+</html>

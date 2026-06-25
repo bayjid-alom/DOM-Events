@@ -149,7 +149,87 @@ document.getElementById("update-btn")
 ```
 
 
+## ✔️ focus - blur - keydown - keyup
+- document.getElementById("user-name").addEventListener("focus", function () {});
+- document.getElementById("user-email").addEventListener("focus", function () {});
+- document.getElementById("user-email").addEventListener("blur", function () {});
 
+```
+document.getElementById("user-name")
+    .addEventListener("keydown", function (event) {
+        console.log('typing', event.target.value) // Event কোথায় হচ্ছে?
+    })
+
+
+document.getElementById("user-name")
+    .addEventListener("keyup", function (event) {
+        console.log('typing', event.target.value) 
+    })
+```
+
+
+## ✔️ Github delete
+```
+(.addEventListener can nested )
+
+document.getElementById("input-delete")
+    .addEventListener("keyup", function (event) {
+        const text = event.target.value;
+        const btnDelete = document.getElementById("btn-delete");
+
+        if (text === "delete") {
+            btnDelete.removeAttribute("disabled")
+            const scretTag = document.getElementById("secret-info");
+            scretTag.style.display = 'none';
+        }
+        else {
+            btnDelete.setAttribute("disabled", true)
+        }
+    })
+```
+
+
+## ✅ Event Bubble & stop Propagating
+
+- Event Bubbling = কোনো element-এ event ঘটলে সেই event ধাপে ধাপে তার parent → grandparent → document পর্যন্ত উপরে উঠতে থাকে।
+---
+- উদাহরণ: button এর ভিতরে click করলে event যাবে:
+- button → div → body → html → document
+---
+- stopPropagation()
+- Event-এর এই উপরে ওঠা (bubbling) বন্ধ করে দেয়।
+---
+```
+button.addEventListener("click", function (e) {
+    e.stopPropagation();
+    console.log("Button clicked");
+});
+```
+
+
+### ✔️ 3 Phase of bubbling :
+| Phase | কী হয়? |
+|--------|---------|
+| **1. Capturing Phase** | Event উপরের element থেকে নিচের target element-এর দিকে যায়। |
+| **2. Target Phase** | Event যে element-এ ঘটেছে সেখানে পৌঁছে। |
+| **3. Bubbling Phase** | Event target element থেকে parent elements-এর দিকে উপরে উঠতে থাকে। |
+
+<br>
+
+## ✅ 
+```
+```
+
+
+
+
+
+
+
+
+
+
+---
 ### ✔️ DOM Event Handlers:
 
 - onclick       → click করলে  (Most used)
@@ -167,6 +247,9 @@ document.getElementById("update-btn")
 
 
 
+
+```
+```
 
 
 --- 

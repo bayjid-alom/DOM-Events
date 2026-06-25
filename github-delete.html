@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Delete</title>
+</head>
+
+<body>
+
+    <!-- বাটন প্রথমে ডিজেবলড অবস্থায় থাকবে, যখন "ডিলেট" লেখা হবে তখন এনাবল হবে । -->
+
+    <h1 id="secret-info">My secret info</h1>
+    <input id="input-delete" placeholder="write delete" type="text">
+    <button id="btn-delete" disabled>Delete</button>
+
+
+
+    <h2 id="not-hide">Not hide</h2>
+    <input id="input-email" placeholder="write bayjid@gmail.com" type="email">
+    <button id="btn-remove" disabled>Remove</button>
+
+
+
+    <script>
+
+        document.getElementById("input-email").addEventListener("keyup", function (event) {
+            const text = event.target.value;
+            const btnRemove = document.getElementById("btn-remove");
+
+
+            if (text === "bayjid@gmail.com") {
+                btnRemove.removeAttribute("disabled");
+                const notHide = document.getElementById("not-hide");
+                notHide.style.display = "none";
+
+                // btnRemove.addEventListener("click", function () {
+                //     notHide.innerText = "Successfully works!"
+                //     notHide.style.color = "blue";
+                // })
+
+            }
+            else {
+                btnRemove.setAttribute("disabled", true)
+            }
+
+        })
+
+
+
+
+
+        document.getElementById("input-delete")
+            .addEventListener("keyup", function (event) {
+                const text = event.target.value;
+                const btnDelete = document.getElementById("btn-delete");
+
+                if (text === "delete") {
+                    btnDelete.removeAttribute("disabled")
+                    const scretTag = document.getElementById("secret-info");
+                    scretTag.style.display = 'none';
+                }
+                else {
+                    btnDelete.setAttribute("disabled", true)
+                }
+            })
+
+    </script>
+</body>
+
+</html>
