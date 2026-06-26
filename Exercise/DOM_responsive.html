@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Responsive</title>
+
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* All Sections */
+
+        section {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+        }
+
+        h1,
+        h2 {
+            margin-bottom: 18px;
+        }
+
+        /* Textarea */
+
+        textarea {
+            width: 100%;
+            resize: vertical;
+            min-height: 180px;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+            transition: .3s;
+        }
+
+        textarea:focus {
+            border-color: #2563eb;
+        }
+
+        /* Input */
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            outline: none;
+            font-size: 16px;
+            transition: .3s;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+        }
+
+        /* Buttons */
+
+        button {
+            margin-top: 15px;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        button:disabled {
+            background: #b8b8b8;
+            cursor: not-allowed;
+        }
+
+        /* Comment Box */
+
+        #comment-container {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .comment {
+            background: #eef4ff;
+            padding: 15px;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+        }
+
+        /* List */
+
+        ol {
+            margin-top: 20px;
+            padding-left: 22px;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* Tablet */
+
+
+        @media (max-width:768px) {
+
+            body {
+                padding: 20px;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            textarea {
+                min-height: 160px;
+            }
+
+        }
+
+        /* Mobile */
+
+
+        @media (max-width:480px) {
+
+            body {
+                padding: 12px;
+                gap: 20px;
+            }
+
+            section {
+                padding: 18px;
+                border-radius: 12px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+                line-height: 1.5;
+            }
+
+            textarea,
+            input {
+                font-size: 15px;
+                padding: 12px;
+            }
+
+            button {
+                width: 100%;
+                padding: 14px;
+                font-size: 15px;
+            }
+
+            li {
+                font-size: 16px;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <section>
+        <h2>This is comment box.</h2>
+        <textarea cols="40" rows="10" placeholder="Write comment......" name="" id="textarea"></textarea>
+        <button id="post-btn">Post comment</button>
+        <div id="comment-container">
+            <!-- comment will show hrer -->
+        </div>
+    </section>
+
+
+    <section class="github-related">
+        <h1>Github Delete :</h1>
+        <h2 id="github-text">Text will disappear when you will written "delete" in input box and click delete button.
+        </h2>
+        <input placeholder="write 'delete' " id="input-text" type="text"> <br>
+        <button id="delete-btn" disabled>Delete</button>
+
+    </section>
+
+
+    <section class="remove-add">
+        <h1>Items List :</h1>
+        <button id="add-item-btn">Add new Item</button>
+
+        <ol id="the-list">
+            <li id="item">item no - 1</li>
+            <li id="item">item no - 2</li>
+            <li id="item">item no - 3</li>
+            <li id="item">item no - 4</li>
+            <li id="item">item no - 5</li>
+            <li id="item">item no - 6</li>
+        </ol>
+    </section>
+
+
+
+    <script>
+
+        const postBtn = document.getElementById("post-btn");
+        postBtn.addEventListener("click", function () {
+            const commentBox = document.getElementById("textarea");
+            const comment = commentBox.value;
+
+            const commentContainer = document.getElementById('comment-container');
+            const commentElement = document.createElement("p");
+            commentElement.innerText = comment;
+            commentElement.classList.add("comment")
+
+            commentContainer.appendChild(commentElement)
+            commentBox.value = ""
+        })
+
+
+
+
+        const inputText = document.getElementById("input-text");
+        inputText.addEventListener("keyup", function () {
+            const text = inputText.value;
+            const deleteBtn = document.getElementById("delete-btn")
+            const disappear = document.getElementById("github-text")
+
+            if (text === "delete") {
+                deleteBtn.removeAttribute("disabled")
+                // disappear.style.display = "none"
+                deleteBtn.addEventListener("click", function () {
+                    disappear.style.display = "none"
+                })
+
+            } else {
+                deleteBtn.setAttribute("disabled", true)
+            }
+        })
+
+
+
+
+
+        document.getElementById("the-list").addEventListener("click", function (event) {
+            console.log(event.target.parentNode.removeChild(event.target))
+        })
+
+        document.getElementById("add-item-btn").addEventListener("click", function () {
+            const ol = document.getElementById("the-list");
+
+            const li = document.createElement("li");
+            li.innerText = "New item added";
+            ol.appendChild(li)
+
+        })
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
