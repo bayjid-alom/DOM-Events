@@ -5,6 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        #hover-btn {
+            width: 100%;
+            max-width: 220px;
+            font-size: 16px;
+        }
+
+        @media (max-width:480px) {
+            #hover-btn {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>

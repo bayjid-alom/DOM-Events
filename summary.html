@@ -7,12 +7,95 @@
     <title>DOM Events summary</title>
 
     <style>
-        p {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             padding: 20px;
-            border-radius: 9px;
+        }
+
+        section {
+            width: 100%;
+            max-width: 550px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #1f2937;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 18px;
+            transition: .3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, .15);
+        }
+
+        button {
+            padding: 12px 22px;
             border: none;
-            margin: 20px;
-            box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            color: white;
+            background: #2563eb;
+            transition: .3s;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #name-container {
+            margin-top: 10px;
+        }
+
+        #name-container p {
+            background: #f8fafc;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+            font-size: 16px;
+            color: #374151;
+            word-break: break-word;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 20px;
+            }
+
+            button {
+                width: 100%;
+                margin-right: 0;
+            }
         }
     </style>
 

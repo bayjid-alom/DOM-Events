@@ -7,15 +7,118 @@
     <title>Comment Box</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            margin: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1B1464;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin: 25px 0 15px;
+            color: #444;
+        }
+
+        section {
+            background: #fff;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
         }
 
         .comment {
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 20px;
-            box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2);
+            background: #f8f9ff;
+            border-left: 5px solid #1B1464;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 18px;
+            line-height: 1.7;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 170px;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            resize: vertical;
+            transition: .3s;
+            margin-top: 10px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #1B1464;
+            box-shadow: 0 0 8px rgba(27, 20, 100, .2);
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #1B1464;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #3129a0;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: scale(.97);
+        }
+
+        /* Tablet */
+        @media(max-width:768px) {
+            body {
+                padding: 15px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+
+        /* Mobile */
+        @media(max-width:576px) {
+            body {
+                margin: 10px auto;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            textarea {
+                min-height: 140px;
+            }
         }
     </style>
 

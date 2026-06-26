@@ -6,49 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handler</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            margin: 22px;
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            background-color: #1b1464b0;
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-bottom: 20px;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: #1B1464;
-            color: white;
-        }
-
-        button:active {
-            transform: scale(0.98);
-        }
-
-
-        .section-design {
-            border: 2px solid #1B1464;
+            max-width: 800px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: lightblue;
-            margin-bottom: 20px;
-            border-radius: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f9fc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1B1464;
+            margin-bottom: 30px;
+        }
+
+        hr {
+            margin: 25px 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
 
         input {
-            padding: 10px 20px;
-            border: 1px solid black;
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #bbb;
             border-radius: 8px;
             font-size: 16px;
-            font-weight: 600;
+            margin: 12px 0;
+            transition: .3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #1B1464;
+            box-shadow: 0 0 6px rgba(27, 20, 100, .25);
+        }
+
+        button {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            background: #1B1464;
+            color: #fff;
             cursor: pointer;
-            transition: 0.3s;
+            font-size: 15px;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #3429c7;
+        }
+
+        button:active {
+            transform: scale(.98);
+        }
+
+        @media(max-width:576px) {
+
+            body {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>

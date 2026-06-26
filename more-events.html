@@ -5,13 +5,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>More Events</title>
+    <style>
+        <style>* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4f46e5, #2563eb);
+            padding: 20px;
+        }
+
+        section {
+            width: 100%;
+            max-width: 420px;
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        section::before {
+            content: "🎯 DOM Events Practice";
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: scale(.98);
+        }
+
+        input {
+            padding: 14px;
+            border: 1.5px solid #d1d5db;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: .3s;
+        }
+
+        input::placeholder {
+            color: #9ca3af;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, .15);
+        }
+
+        @media (max-width: 500px) {
+            section {
+                padding: 25px 20px;
+            }
+
+            section::before {
+                font-size: 20px;
+            }
+
+            button,
+            input {
+                font-size: 15px;
+            }
+        }
+    </style>
+    </style>
+
 </head>
 
 <body>
 
-    <button id="btn-mouse">Micky Mouse Minnie</button>
-    <input type="text" id="user-name" placeholder="Your name">
-    <input type="text" id="user-email" placeholder="Your email">
+    <section>
+        <button id="btn-mouse">Micky Mouse Minnie</button>
+        <input type="text" id="user-name" placeholder="Your name">
+        <input type="text" id="user-email" placeholder="Your email">
+    </section>
 
 
     <script>
