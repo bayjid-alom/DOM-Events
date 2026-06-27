@@ -1,75 +1,5 @@
-/* button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: #1b1464b0;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #1B1464;
-    color: white;
-}
-
-button:active {
-    transform: scale(0.98);
-}
-
-input {
-    padding: 10px 20px;
-    border: 1px solid black;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.pages a {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.pages {
-    padding: 20px;
-}
-
-.pages h2 {
-    margin: 15px 0 10px;
-}
-
-.pages a {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.pages a:hover {
-    background: #f3f3f3;
-} */
-
-
-
-
-
-/* ==========================
-   Google Font (Optional)
-========================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* ==========================
-   Reset
-========================== */
 
 * {
     margin: 0;
@@ -86,9 +16,19 @@ body {
     line-height: 1.6;
 }
 
-/* ==========================
-   Main Container
-========================== */
+.notice {
+    background: linear-gradient(90deg, #f8fbff, #eef5ff);
+    color: #1d4ed8;
+    padding: 12px 16px;
+    border: 1px solid #bfdbfe;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+    letter-spacing: 0.5px;
+}
+
 
 .container {
     max-width: 1200px;
@@ -99,9 +39,7 @@ body {
     box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
 }
 
-/* ==========================
-   Headings
-========================== */
+/* Headings  */
 
 h1 {
     text-align: center;
@@ -116,17 +54,12 @@ h2 {
     font-size: 28px;
 }
 
-/* ==========================
-   Section
-========================== */
+/* Sections */
 
 section {
     margin-bottom: 40px;
 }
 
-/* ==========================
-   Horizontal Line
-========================== */
 
 hr {
     border: none;
@@ -135,9 +68,7 @@ hr {
     margin: 40px 0;
 }
 
-/* ==========================
-   Buttons
-========================== */
+/* Buttons styles */
 
 button {
     padding: 13px 24px;
@@ -162,9 +93,7 @@ button:active {
     transform: scale(.97);
 }
 
-/* ==========================
-   Input
-========================== */
+/* Input */
 
 input {
     width: 320px;
